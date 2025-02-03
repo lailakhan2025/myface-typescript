@@ -2,14 +2,41 @@
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
+<main>
 <h1>Posts</h1>
 <ol>
     <% postList.results.forEach(function(post) {%>
         <li>
-            <%= post.message %> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %>
+            <figure>
+            <img src = "<%= post.imageUrl%>" width = 100 height = 100 alt = "Post Image"/>
+            </figure>
+            <section>
+            <p> <strong> Message : <%= post.message %> </strong> </p>
+            </section>
+            <footer>
+            <p>Posted By : <%= post.postedBy.name %>, User Id : <%= post.id %>, Created Date : <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss")%> </p>
+            <p>Liked By : 
+            <% post.likedBy.forEach(function(user) {%>            
+                    <%= user.name %> . 
+            <% }); %> </p>
+
+            <p>Disliked By : 
+            <% post.dislikedBy.forEach(function(user) {%>            
+                <%= user.name %> .
+            <% }); %> </p>
+            </footer>
         </li>
     <% }); %>
 </ol>
+
+<%if (postList.previous) { %>
+    <a href="<%= postList.previous %>">Previous</a>
+<% } %>
+<%if (postList.next) { %>
+    <a href="<%= postList.next %>">Next</a>
+<% } %>
+
+</main>
 </body>
 <%- include('_footer') -%>
 </html>
