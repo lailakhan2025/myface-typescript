@@ -13,16 +13,30 @@
             <p> Message : <%= post.message %> </p>
           
             <footer>
-                <p>Posted By : <%= post.postedBy.name %>, User Id : <%= post.id %>, Created Date : <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss")%> </p>
-                <p>Liked By : 
+                <p> Posted By : <%= post.postedBy.name %>, Post Id : <%= post.id %>, 
+                        Created Date : <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss")%> 
+                </p>
+                <p> Liked By : 
                         <% post.likedBy.forEach(function(user) {%>            
                         <%= user.name %> . 
-                        <% }); %> </p>
+                        <% }); %> 
+                        
+                        <form method="post" action="/posts/<%=post.id%>/like/">
+                            <button type="submit">Like</button>
+                        </form>
+                </p>
 
-                <p>Disliked By : 
+                        
+                <p> Disliked By : 
                         <% post.dislikedBy.forEach(function(user) {%>            
                         <%= user.name %> .
-                        <% }); %> </p>
+                        <% }); %> 
+
+                        <form method="post" action="/posts/<%=post.id%>/dislike/">  
+                            <button type="submit">Dislike</button>
+                        </form>
+                </p>
+
             </footer>
         </li>
     <% }); %>
