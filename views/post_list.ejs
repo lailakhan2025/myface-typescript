@@ -21,9 +21,7 @@
                         <%= user.name %> . 
                         <% }); %> 
                         
-                        <form method="post" action="/posts/<%=post.id%>/like/">
-                            <button type="submit">Like</button>
-                        </form>
+                       
                 </p>
 
                         
@@ -32,10 +30,16 @@
                         <%= user.name %> .
                         <% }); %> 
 
-                        <form method="post" action="/posts/<%=post.id%>/dislike/">  
-                            <button type="submit">Dislike</button>
-                        </form>
+                        
                 </p>
+
+                <form class = "button-container" method="post" action="/posts/<%=post.id%>/like/">
+                    <button type="submit">Like</button>
+                </form>
+                
+                <form class = "button-container" method="post" action="/posts/<%=post.id%>/dislike/">  
+                    <button type="submit">Dislike</button>
+                </form>
 
             </footer>
         </li>

@@ -1,56 +1,69 @@
 /* Add your styles here. */
 body{
-    background-color: antiquewhite;
-
+    background-color: #65CCB8;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1{
-  color: black;
+  color: #182628;
   font-size: 50px;
   font-weight:bold;
+  padding: 15px;
 }
 
 li {
     border-style: solid;
     border-width: medium;
+    border-color: #F2F2F2 ;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 li footer{
     font-size: 15px;
-    color: blue;
+    color: BLACK;
 
 }
 
-button {
-  background-color: #EA4C89;
-  border-radius: 8px;
-  border-style: none;
-  box-sizing: border-box;
-  color: white;
-  cursor: pointer;
+li .button-container{
   display: inline-block;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  height: 40px;
-  line-height: 20px;
-  list-style: none;
-  margin: 0;
-  outline: none;
-  padding: 10px 16px;
-  position: relative;
+  gap: 10px;
+ 
+}
+button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin: 15px 15px;
   text-align: center;
   text-decoration: none;
-  transition: color 100ms;
-  vertical-align: baseline;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
+  font-size: 16px;
+  }
 
 button:hover,
 button:focus {
   background-color: #F082AC;
+}
+
+p {
+  font-size: 15px;
+  color: #0D1B2A;
+  padding-left: 5px;
+}
+
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkblue;
+    text-decoration: underline;
 }
 
 
