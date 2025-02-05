@@ -3,48 +3,21 @@
 <%- include('_header') -%>
 <body>
 <main>
-<h1>Posts</h1>
-<ol>
+<ul class="unstyled">
     <% postList.results.forEach(function(post) {%>
         <li>
             <figure>
-                <img src = "<%= post.imageUrl%>" width = 100 height = 100 alt = "Post Image"/>
-            </figure>           
-            <p> Message : <%= post.message %> </p>
-          
-            <footer>
-                <p> Posted By : <%= post.postedBy.name %>, Post Id : <%= post.id %>, 
-                        Created Date : <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss")%> 
-                </p>
-                <p> Liked By : 
-                        <% post.likedBy.forEach(function(user) {%>            
-                        <%= user.name %> . 
-                        <% }); %> 
-                        
-                       
-                </p>
-
-                        
-                <p> Disliked By : 
-                        <% post.dislikedBy.forEach(function(user) {%>            
-                        <%= user.name %> .
-                        <% }); %> 
-
-                        
-                </p>
-
-                <form class = "button-container" method="post" action="/posts/<%=post.id%>/like/">
-                    <button type="submit">Like</button>
-                </form>
-                
-                <form class = "button-container" method="post" action="/posts/<%=post.id%>/dislike/">  
-                    <button type="submit">Dislike</button>
-                </form>
-
-            </footer>
+                <img class = "img" src = "<%= post.imageUrl%>" width = 100 height = 100 alt = "Post Image"/>
+            </figure>     
+            <div class = "content">
+                <p class = "postedby" >  <%= post.postedBy.name %> </p>
+                <p class = "date" >   <%= format(post.createdAt, "dd-MM-yyyy")%> </p>
+                <p class = "message" > <%= post.message %> </p>
+            </div>
+        
         </li>
     <% }); %>
-</ol>
+</ul>
 
 <%if (postList.previous) { %>
     <a href="<%= postList.previous %>">Previous</a>

@@ -1,8 +1,62 @@
 /* Add your styles here. */
+nav{
+  background-color: #000000;
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #DCDCDC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  top:0;
+  left:0;
+  right:0;
+}
+
+.logo {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #DCDCDC;
+  display: flex;
+  align-content: flex-start;
+}
+
+.centreLinks {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #DCDCDC;
+  display: flex;
+  align-items: center;
+}
+
+
+.sideLinks {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #DCDCDC;
+  display: flex;
+  align-content: flex-end;
+}
+
+
+nav a {
+  color :  #DCDCDC;
+  text-decoration: none;
+}
+
+
 body{
-    background-color: #65CCB8;
+
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin-top: 40px;
     padding: 15px;
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+
 }
 
 h1{
@@ -13,28 +67,37 @@ h1{
 }
 
 li {
-    border-style: solid;
+    /*border-style: solid;
     border-width: medium;
-    border-color: #F2F2F2 ;
-    background-color: #F2F2F2;
+    border-color: #F2F2F2 */
+    background-color: black;
     border-radius: 15px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin : 15px; 
+    max-width: 30vw;
+    max-height: 30vw;
 }
 
-li footer{
-    font-size: 15px;
-    color: BLACK;
-
+.img{
+  top: 0;
+  position: relative;
+  height: 30vh;
+  width:auto;
 }
 
-li .button-container{
+.content{
+  color: white; 
+  font-size: 15px;
+  overflow-wrap: break-word;
+  
+}
+
+/* li .button-container{
   display: inline-block;
   gap: 10px;
  
-}
-button {
-  background-color: #04AA6D; /* Green */
+} */
+/* button {
+  background-color: #04AA6D; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -42,28 +105,11 @@ button {
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  }
+} 
 
 button:hover,
 button:focus {
   background-color: #F082AC;
-}
-
-p {
-  font-size: 15px;
-  color: #0D1B2A;
-  padding-left: 5px;
-}
-
-
-a {
-    color: blue;
-    text-decoration: none;
-}
-
-a:hover {
-    color: darkblue;
-    text-decoration: underline;
-}
+} */
 
 
