@@ -2,7 +2,61 @@
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
-<h1><%= name %></h1>
+   <%= name %>
+   <%= username%>
+   <img
+   class="img"
+   src=<%= profileImageUrl %> 
+   alt="Post Image"/>
+
+   <img
+   class="img"
+   src=<%= coverImageUrl %> 
+   alt="Cover Image"/>
+
+
+   <% posts.forEach(function(post) {%>
+    <li>
+      <figure>
+        <img
+          class="img"
+          src="<%= post.imageUrl%>"
+          alt="Post Image"
+        />
+      </figure>
+      <div class="content">
+        <p class="message"><%= post.message %></p>
+      </div>
+    </li>
+    <% }); %>
+    <% likes.forEach(function(likes) {%>
+        <li>
+          <figure>
+            <img
+              class="img"
+              src="<%= likes.imageUrl%>"
+              alt="Post Image"
+            />
+          </figure>
+          <div class="content">
+            <p class="message"><%= likes.message %></p>
+          </div>
+        </li>
+        <% }); %>
+        <% dislikes.forEach(function(dislikes) {%>
+            <li>
+              <figure>
+                <img
+                  class="img"
+                  src="<%= dislikes.imageUrl%>"
+                  alt="Post Image"
+                />
+              </figure>
+              <div class="content">
+                <p class="message"><%= dislikes.message %></p>
+              </div>
+            </li>
+            <% }); %>
 </body>
 <%- include('_footer') -%>
 </html>
