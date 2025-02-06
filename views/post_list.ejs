@@ -2,7 +2,7 @@
   <%- include('_head') -%> <%- include('_header') -%>
   <body>
     <main>
-        <ul class="unstyled">
+        <ul class="unstyled" id="postList">
           <% postList.results.forEach(function(post) {%>
           <li>
             <figure>
@@ -28,7 +28,10 @@
             <a href="<%= postList.next %>">Next</a>
           <% } %>
         </div>
+
+        <button type="submit" id="changeColor">Color Me</button>
     </main>
   </body>
   <%- include('_footer') -%>
+
 </html>
