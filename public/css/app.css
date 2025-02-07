@@ -1,44 +1,39 @@
-/* Add your styles here. */
+/* Navigation bar */
 nav {
-  background-color: #000000;
+  background-color: #010b10;
   position: fixed;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #dcdcdc;
+  font-family: "Montserrat", serif;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 5px;
+  gap: 30%;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
 }
 
-.logo {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #dcdcdc;
-  display: flex;
-  align-content: flex-start;
+#logo {
+  margin-left: 3%;
+  font-weight: 800;
+  font-size: 16px;
+  color: white;
 }
 
-.centreLinks {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #dcdcdc;
+.links {
   display: flex;
-  align-items: center;
+  gap: 30px;
 }
 
-.sideLinks {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #dcdcdc;
-  display: flex;
-  align-content: flex-end;
-}
-
-nav a {
-  color: #dcdcdc;
+.links a {
   text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
 }
+
+/* main body*/
 
 body {
   background: #0f2027; /* fallback for old browsers */
@@ -54,66 +49,214 @@ body {
     #203a43,
     #0f2027
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Montserrat", serif;
   margin-top: 80px;
   padding: 15px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
-  color: #ffffff;
-  font-size: 50px;
-  font-weight: bold;
-  padding: 15px;
-}
+/* Posts page */
 
-/*.container {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}*/
-
-ul {
+.post-container {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  /*gap: 20 px;*/
+  justify-content: center;
   width: 100%;
+  padding: 0;
 }
 
-li {
+.post {
   display: flex;
   flex-direction: column;
-  background-color: black;
-  border: 1px solid black;
+  background-color: #010b106f;
+  border: 1px solid #010b106f;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 20px;
   margin: 15px;
-  max-width: 30vw;
-  max-height: 30vw;
+  width: 25%;
+  aspect-ratio: 1/1;
 }
 
-.img {
-  top: 0;
-  position: relative;
-  height: auto;
-  width: 15vw;
-}
-
-.content {
-  width: 200px;
-  height: 100px;
+.postedby {
+  display: inline-flex;
+  justify-content: space-evenly;
   color: white;
-  font-size: 10px;
-  margin-left: 20px;
+  font-size: 12px;
+  align-items: center;
 }
 
-.footer a {
-  color: #dcdcdc;
+.postimg {
+  height: auto;
+  width: 65%;
+  align-self: center;
+}
+
+.message {
+  color: white;
+  font-size: 14px;
+  align-self: center;
+  justify-self: center;
+  word-wrap: break-word;
+  text-align: center;
+  word-break: break-word;
+  white-space: normal;
+  overflow: break-word;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.buttonLinks {
+  width: 80px;
+  height: 25px;
+  background: #010b10;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  border: solid #2c5364 outset 2px;
   text-decoration: none;
 }
 
-.sidenav {
+#newPostButton {
+  width: 80px;
+  height: 50px;
+  background: #010b10;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  border: solid #2c5364 outset 2px;
+}
+
+/* Home page */
+
+.userprofile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+#profileimg {
+  border-radius: 50%;
+  border: outset;
+  width: 10%;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.name {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
+  margin-right: 6%;
+  margin-left: 6%;
+  border-bottom: silver solid 0.3px;
+  line-height: 0cm;
+}
+
+.user-container {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  background-color: #010b106f;
+  border: 1px solid #010b106f;
+  border-radius: 20px;
+  margin: 15px;
+  width: 20%;
+  aspect-ratio: 1/1;
+}
+
+.userpostimg {
+  height: auto;
+  width: 65%;
+  align-self: center;
+}
+.postedbyuser {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+.usermessage {
+  color: white;
+  font-size: 14px;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  word-break: break-word;
+  white-space: normal;
+  overflow: break-word;
+}
+
+/*User page*/
+.userlist {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  padding: 40px;
+}
+
+#userlistimg {
+  display: flex;
+  border-radius: 50%;
+  border: outset;
+  width: 30%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 0;
+  justify-self: center;
+}
+
+.userlistinfo {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/*New Post*/
+.newpost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  font-size: 18px;
+  color: white;
+  margin-left: 25px;
+}
+
+#mysidenav {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -121,76 +264,238 @@ li {
   gap: 30px;
   background-color: black;
   height: 100%;
-  width: 75%;
+  width: 0;
   right: 0;
-  top:0;
+  top: 0;
   z-index: 1000;
+}
+
+#mysidenav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+#mysidenav a {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 12;
+  font-weight: 300;
+}
+
+#sidenavbutton {
   display: none;
 }
 
-.sidenav a {
-  text-align: center;
+@media (max-width: 944px) and (min-width: 480px) {
+  /*nav*/
+  nav {
+    gap: 22%;
+  }
+  #logo {
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .links {
+    gap: 15px;
+  }
+
+  .links a {
+    font-size: 12px;
+    font-weight: 200;
+  }
+  /*posts*/
+
+  .post-container {
+    padding: 0;
+  }
+
+  .post {
+    min-width: 45%;
+    aspect-ratio: 1/1;
+  }
+  .postedby {
+    font-size: 8px;
+  }
+
+  .postimg {
+    height: auto;
+    width: 70%;
+  }
+
+  .message {
+    font-size: 12px;
+  }
+
+  /* Home page */
+
+  .userprofile {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  #profileimg {
+    width: 10%;
+  }
+
+  .userinfo {
+    gap: 20px;
+  }
+  .name {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  .title {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  .user {
+    min-width: 45%;
+    aspect-ratio: 1/1;
+  }
+  .userpostimg {
+    height: auto;
+    width: 70%;
+  }
+  .postedbyuser {
+    font-size: 8px;
+  }
+  .usermessage {
+    font-size: 12px;
+  }
+
+  /*User page*/
+  .userlist {
+    padding: 0px;
+  }
+
+  #userlistimg {
+    width: 25%;
+  }
+
+  .userlistinfo {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  /*New Post*/
+  .newpost {
+    font-size: 10px;
+    margin-left: 25px;
+  }
+
+  #sidenavbutton {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  /*nav*/
+  nav {
+    display: none;
+  }
+
+  #sideNavButton {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: white;
+    background: black;
+  }
+
+  #mysidenav {
+    width: 0;
+  }
+
+  body {
+    margin-top: 10;
+  }
+
+  /*posts*/
+
+  .post-container {
+    padding: 0;
+  }
+
+  .post {
+    min-width: 80%;
+    aspect-ratio: 1/1;
+  }
+  .postedby {
+    font-size: 10px;
+  }
+
+  .postimg {
+    height: auto;
+    width: 65%;
+  }
+
+  .message {
+    font-size: 12px;
+  }
+
+  /* Home page */
+
+  .userprofile {
+    display: flex;
+    justify-self: center;
+  }
+
+  #profileimg {
+    width: 30%;
+  }
+
+  .userinfo {
+    display: none;
+  }
+
+  .title {
+    font-size: 8px;
+    font-weight: 300;
+  }
+
+  .user {
+    min-width: 70%;
+    aspect-ratio: 1/1;
+  }
+  .userpostimg {
+    height: auto;
+    width: 70%;
+  }
+  .postedbyuser {
+    font-size: 10px;
+  }
+  .usermessage {
+    font-size: 14px;
+  }
+
+  /*User page*/
+  .userlist {
+    padding: 0px;
+  }
+
+  #userlistimg {
+    width: 33%;
+  }
+
+  .userlistinfo {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  /*New Post*/
+  .newpost {
+    font-size: 8px;
+    margin-left: 15px;
+  }
+}
+
+.footer a {
   color: #dcdcdc;
   text-decoration: none;
 }
-
-@media (max-width: 550px) {
-  nav{
-    font-size: 12px;
-  }
-  ul {
-    width: 100%;
-    gap: 0 px;
-    justify-self: center
-  }
-  li {
-    min-width: 70vw;
-    min-height: 70vw;
-    overflow: hidden;
-    /*margin: 5px;*/
-    justify-self: center;
-    align-self: center;
-    margin-right:0;
-    margin-left: 0;
-  }
-  img {
-    min-width: 40vw;
-    height: auto;
-    justify-self: center;
-  }
-
-  .content {
-    font-size: 8px;
-    /*width: 80px;
-    height: 40px;*/
-  }
-
-  @media (max-width: 320px) {
-    .sidenav {
-      display: flex;
-    }
-  }
-}
-
-
-
-/* li .button-container{
-  display: inline-block;
-  gap: 10px;
- 
-} */
-/* button {
-  background-color: #04AA6D; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  margin: 15px 15px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-} 
-
-button:hover,
-button:focus {
-  background-color: #F082AC;
-} */

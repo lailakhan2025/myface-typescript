@@ -1,15 +1,19 @@
 <html lang="en-gb">
   <%- include('_head') -%> <%- include('_header') -%>
   <body>
-    <h1>Users</h1>
-    <ol>
+    <ul class="userlist">
       <% results.forEach(function(user) {%>
-      <li>
-        <%= user.name %> 
+      <li class="userlistprofile">
+        <img id="userlistimg" src="<%" ="user.profileImageUrl" % />
+        alt= "Post Image"/>
+        <div class="userlistinfo">
+          <div class="username"><%= user.name %></div>
+          <div class="username"><%= user.username%></div>
+        </div>
       </li>
 
       <% }); %>
-    </ol>
+    </ul>
     <%if (next) { %>
     <a href="<%= next %>">Next</a>
     <% } %> <%if (previous) { %>

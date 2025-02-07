@@ -2,36 +2,31 @@
   <%- include('_head') -%> <%- include('_header') -%>
   <body>
     <main>
-        <ul class="unstyled" id="postList">
-          <% postList.results.forEach(function(post) {%>
-          <li>
-            <figure>
-              <img
-                class="img"
-                src="<%= post.imageUrl%>"
-                alt="Post Image"
-              />
-            </figure>
-            <div class="content">
-              <p class="postedby"><%= post.postedBy.name %></p>
-              <p class="date"><%= format(post.createdAt, "dd/MM/yyyy")%></p>
-              <p class="message"><%= post.message %></p>
-            </div>
-          </li>
-          <% }); %>
-        </ul>
+      <ul class="post-container" id="postList">
+        <% postList.results.forEach(function(post) {%>
+        <li class = "post" >
+          <div class="postedby">
+            <p><%= post.postedBy.name %></p>
+            <p><%= format(post.createdAt, "dd/MM/yyyy")%></p>
+          </div>
+          <img class="postimg" src="<%= post.imageUrl%>" alt="Post Image" />
+          <p class="message"> <%= post.message %> </p>
+        </li>
+        <% }); %>
+      </ul>
 
-        <div class = "footer">
-          <%if (postList.previous) { %>
-            <a href="<%= postList.previous %>">Previous</a>
-          <% } %> <%if (postList.next) { %>
-            <a href="<%= postList.next %>">Next</a>
-          <% } %>
-        </div>
+      <div class="footer">
+        <%if (postList.previous) { %>
+        <a class = "buttonLinks" href="<%= postList.previous %>">Previous</a>
+        <% } %> <%if (postList.next) { %>
+        <a class = "buttonLinks" href="<%= postList.next %>">Next</a>
+        <% } %>
 
-        <button type="submit" id="changeColor">Color Me</button>
+        <a type="submit" id = "changeColor" class = "buttonLinks">Color Me</a>
+      </div>
+
+      
     </main>
   </body>
   <%- include('_footer') -%>
-
 </html>
