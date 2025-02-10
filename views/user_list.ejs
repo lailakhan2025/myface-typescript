@@ -4,16 +4,16 @@
     <ul class="userlist">
       <% results.forEach(function(user) {%>
       <li class="userlistprofile">
-        <img id="userlistimg" src="<%" ="user.profileImageUrl" % />
+        <img id="userlistimg" src="<%= user.profileImageUrl %>"
         alt= "Post Image"/>
         <div class="userlistinfo">
           <div class="username"><%= user.name %></div>
-          <div class="username"><%= user.username%></div>
+          <div class="username"><%= user.username %></div>
         </div>
       </li>
-
       <% }); %>
     </ul>
+
     <%if (next) { %>
     <a href="<%= next %>">Next</a>
     <% } %> <%if (previous) { %>
